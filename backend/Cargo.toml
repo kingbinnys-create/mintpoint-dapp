@@ -1,0 +1,27 @@
+[workspace]
+resolver = "2"
+members = [
+    "packages/cli",
+    "packages/rules",
+    "libs/analysis-core",
+    "libs/engine", 
+    "libs/ast",
+    "libs/parsers/rust",
+    "libs/parsers/solidity",
+    "libs/parsers/vyper",
+    "libs/rule-engine",
+    "libs/plugin-system",
+    "libs/auto-fix",
+    "apps/api",
+    "tests/mutation",
+    "packages/examples/stellar/token-example",
+    "packages/examples/stellar/access-control-example",
+    "packages/examples/stellar/upgradeable-example"
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Mintpoint Team"]
+license = "MIT"
+description = "Mintpoint DApp Suite for Stellar Soroban Contracts"

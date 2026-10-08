@@ -1,14 +1,14 @@
-# GasGuard: Automated Optimization Suite
+# Mintpoint DApp: Automated Optimization & Smart Contract Suite
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Ecosystem: Stellar](https://img.shields.io/badge/Ecosystem-Stellar/Soroban-purple.svg)](https://stellar.org)
 
-**GasGuard** is an open-source static analysis tool built to secure and optimize the Stellar ecosystem (Soroban), with extended support for Ethereum and Layer 2 networks. By identifying inefficient storage patterns and redundant operations during development, GasGuard enables developers to ship leaner code, reducing end-user transaction costs by an estimated **15-30%**.
+**Mintpoint DApp** is an open-source static analysis and contract optimization platform built to secure and optimize the Stellar ecosystem (Soroban), with extended support for Ethereum and Layer 2 networks. By identifying inefficient storage patterns and redundant operations during development, Mintpoint DApp enables developers to ship leaner code, reducing end-user transaction costs by an estimated **15-30%**.
 
 ---
 
 ### 1. Executive Summary
-In the high-stakes world of smart contracts, inefficient code is more than a nuisance—it's an expense. GasGuard analyzes codebases to find "gas-heavy" patterns before they reach the mainnet. Specifically optimized for **Soroban's resource limits**, it ensures that Stellar developers can maximize their contract's efficiency and reach.
+In the high-stakes world of smart contracts, inefficient code is more than a nuisance—it's an expense. Mintpoint DApp analyzes codebases to find "gas-heavy" patterns before they reach the mainnet. Specifically optimized for **Soroban's resource limits**, it ensures that Stellar developers can maximize their contract's efficiency and reach.
 
 ### 2. The Problem
 As Web3 scales, transaction costs remain a significant barrier to entry.
@@ -29,26 +29,42 @@ As Web3 scales, transaction costs remain a significant barrier to entry.
 * **Phase 2:** Launch the GitHub Action Marketplace integration for automated PR reviews.
 * **Phase 3:** Establish a "Community Ruleset" allowing users to contribute new optimization patterns via Pull Requests.
 
-### 5. Why GasGuard belongs in Drips Wave
+### 5. Why Mintpoint DApp belongs in Drips Wave
 * **Public Good:** The core engine is 100% free and MIT-licensed to benefit the entire developer community.
 * **Scalability:** The modular design allows us to add support for 3 new languages (Rust, Vyper, Move) over the next 6 months.
 * **Sustainability:** We use Drips to "pass through" 15% of our funding to the foundational security libraries (like Slither or Cargo-Audit) that power our engine.
 
 ---
 
-## 🛠 Project Structure (Monorepo)
+## 🛠 Project Structure
+
+The codebase is divided into two primary sections:
 
 ```text
-GasGuard/
-├── apps/
-│   ├── api/               # Nest.js backend handling remote scan requests
-│   └── api-service/       # Enhanced API service with database and E2E testing
-├── libs/
-│   └── engine/            # Core logic for parsing Rust, Solidity, and Vyper
-├── packages/
-│   └── rules/             # Library of optimization rules and logic
-├── .gitignore             # Optimized for Node.js and Rust
-└── LICENSE                # MIT Licensed
+mintpoint-dapp/
+├── frontend/                  # Modern Web Application (React, TypeScript, Vite, Tailwind CSS)
+│   ├── src/
+│   │   ├── components/        # Dashboard, FileDetails, GasSavingsDashboard, UI components
+│   │   ├── services/          # API integration services (axios)
+│   │   ├── lib/               # Utility functions and class mergers
+│   │   └── App.tsx            # Application root
+│   ├── vite.config.ts         # Vite bundler configuration
+│   └── package.json           # Frontend package and build scripts
+│
+├── backend/                   # Backend services, Smart Contracts, Rust Engine, and CLI
+│   ├── apps/
+│   │   ├── api/               # Rust/Nest.js backend handling scan requests
+│   │   ├── api-service/       # Enhanced API service with database & E2E testing
+│   │   ├── cli/               # CLI application
+│   │   └── rust/              # Rust property-token applications
+│   ├── contracts/             # Solidity & Soroban smart contracts
+│   ├── libs/                  # Engine, analysis-core, rule-engine, parsers, simulation
+│   ├── packages/              # Rules, CLI crates, and examples
+│   ├── Cargo.toml             # Rust workspace definition
+│   └── package.json           # Backend npm workspace configuration
+│
+├── .gitignore                 # Optimized for Node.js, Rust, and Solidity
+└── LICENSE                    # MIT Licensed
 ```
 
 ---

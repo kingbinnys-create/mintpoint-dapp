@@ -1,13 +1,15 @@
 packages:
-  - 'apps/*'
-  - 'libs/*'
-  - 'packages/*'
+  - 'frontend'
+  - 'backend'
+  - 'backend/apps/*'
+  - 'backend/libs/*'
+  - 'backend/packages/*'
 allowBuilds:
-  '@nestjs/core': set this to true or false
-  '@scarf/scarf': set this to true or false
-  bcrypt: set this to true or false
-  esbuild: set this to true or false
-  keccak: set this to true or false
-  msgpackr-extract: set this to true or false
-  secp256k1: set this to true or false
-  unrs-resolver: set this to true or false
+  '@nestjs/core': true
+  '@scarf/scarf': false
+  bcrypt: true
+  esbuild: true
+  keccak: true
+  msgpackr-extract: true
+  secp256k1: true
+  unrs-resolver: true

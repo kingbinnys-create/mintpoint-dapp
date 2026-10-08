@@ -1,21 +1,30 @@
 # Dependencies
 node_modules
-/target
+**/node_modules/
+target
+**/target/
 gasguard-cli/target
 
 # Foundry / Hardhat build output
 /out
+**/out/
 /cache
+**/cache/
 /artifacts
+**/artifacts/
 /typechain-types
+**/typechain-types/
 
 # Production
 dist
+**/dist/
 build
+**/build/
 
 # Environment
 .env
 .env.local
+*.env
 
 # IDEs
 .vscode/*
@@ -30,7 +39,7 @@ npm-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Terraform (since you use it)
+# Terraform
 .terraform
 *.tfstate
 *.tfstate.backup
